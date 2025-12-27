@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>York Bakery - Cafe de Especialidad en Villa La Angostura</title>
+  <meta name="description" content="York Bakery. Cafe de especialidad, panaderia y hojaldres. Las Frambuesas 100, Villa La Angostura, Neuquen. Abierto de lunes a domingo 8 AM a 21 PM." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: "#FFF8EC",
+            cremaDark: "#F2E4CE",
+            oro: "#D4AF37",
+            marron: "#6B4423",
+            marronOscuro: "#3E2723",
+            carbon: "#1B1B1B"
+          },
+          fontFamily: {
+            serifBrand: ["Playfair Display", "serif"],
+            body: ["Poppins", "sans-serif"]
+          },
+          boxShadow: {
+            suave: "0 10px 30px rgba(0,0,0,0.12)"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FFF8EC;
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1B1B1B;
+    }
+    .section-rounded {
+      border-radius: 32px;
+    }
+    .video-hero-container {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+    .video-hero {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-marron">York Bakery</div>
+      <div class="hidden md:flex gap-8">
+        <a href="#inicio" class="text-carbon hover:text-oro">Inicio</a>
+        <a href="#diferenciadores" class="text-carbon hover:text-oro">Por que York</a>
+        <a href="#productos" class="text-carbon hover:text-oro">Productos</a>
+        <a href="#reels" class="text-carbon hover:text-oro">Galeria</a>
+        <a href="#ubicacion" class="text-carbon hover:text-oro">Ubicacion</a>
+      </div>
+      <a href="https://wa.me/?text=Hola%20York%20Bakery" class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600">Pedir</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="w-full h-screen overflow-hidden bg-black video-hero-container mt-16">
+    <video src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=2000&fit=crop" class="w-full h-full object-cover scale-125" autoplay muted loop playsinline></video>
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-white text-center">
+      <h1 class="font-serifBrand text-5xl md:text-7xl mb-4 font-bold">York Bakery</h1>
+      <p class="text-lg md:text-2xl mb-8 max-w-md">Cafe de especialidad, panaderia y hojaldres artesanales</p>
+      <div class="flex gap-4">
+        <a href="#productos" class="bg-oro text-black px-8 py-3 rounded-full font-bold hover:bg-opacity-90">Ver Menu</a>
+        <a href="https://wa.me/?text=Hola%20York%20Bakery" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-opacity-90">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIADORES -->
+  <section id="diferenciadores" class="py-20 px-4 bg-crema">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-serifBrand text-center mb-12 font-bold text-marronOscuro">Por que York Bakery</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-suave text-center">
+          <div class="text-4xl text-oro mb-4"><i class="fas fa-leaf"></i></div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Ingredientes Premium</h3>
+          <p class="text-gray-600">Seleccionamos los mejores ingredientes locales para cada pan y pastel que hacemos.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-suave text-center">
+          <div class="text-4xl text-oro mb-4"><i class="fas fa-clock"></i></div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Proceso Artesanal</h3>
+          <p class="text-gray-600">Masa madre, fermentacion lenta y horno de lena. Nada es rapido, todo es perfecto.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-suave text-center">
+          <div class="text-4xl text-oro mb-4"><i class="fas fa-heart"></i></div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Pasion Patagonica</h3>
+          <p class="text-gray-600">Cada producto refleja nuestra pasion por la panaderia y el arte culinario.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-serifBrand text-center mb-12 font-bold text-marronOscuro">Nuestros Productos</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-suave">
+          <div class="w-full h-64 bg-gray-200 rounded-xl mb-6 flex items-center justify-center">
+            <i class="fas fa-bread-slice text-6xl text-oro opacity-50"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Panes Artesanales</h3>
+          <p class="text-gray-600 mb-4">Pan integral, baguettes, pan de masa madre. Todos con ingredientes premium y fermentacion lenta de 24 horas.</p>
+          <p class="text-xl font-bold text-oro">Desde $450</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-suave">
+          <div class="w-full h-64 bg-gray-200 rounded-xl mb-6 flex items-center justify-center">
+            <i class="fas fa-croissant text-6xl text-oro opacity-50"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Medialunas y Hojaldres</h3>
+          <p class="text-gray-600 mb-4">Medialunas caseras, croissants de chocolate, danesas con frutas. Recetas europeas con toque Patagonico.</p>
+          <p class="text-xl font-bold text-oro">Desde $350</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-suave">
+          <div class="w-full h-64 bg-gray-200 rounded-xl mb-6 flex items-center justify-center">
+            <i class="fas fa-coffee text-6xl text-oro opacity-50"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Cafe de Especialidad</h3>
+          <p class="text-gray-600 mb-4">Cafe seleccionado de diferentes origenes. Preparado con tecnica de barista profesional.</p>
+          <p class="text-xl font-bold text-oro">Desde $300</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-suave">
+          <div class="w-full h-64 bg-gray-200 rounded-xl mb-6 flex items-center justify-center">
+            <i class="fas fa-cake-candles text-6xl text-oro opacity-50"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-marron mb-2">Tartas y Postres</h3>
+          <p class="text-gray-600 mb-4">Tartas personalizadas, postres del dia, budines caseros. Todo preparado fresco para cada pedido.</p>
+          <p class="text-xl font-bold text-oro">Consultar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA/REELS -->
+  <section id="reels" class="py-20 px-4 bg-cremaDark">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-serifBrand text-center mb-4 font-bold text-marronOscuro">Nuestra Misica en Video</h2>
+      <p class="text-center text-gray-600 mb-12">Desde Instagram @york.bakery</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-2xl overflow-hidden bg-black aspect-[9/16] shadow-suave">
+          <iframe src="https://www.instagram.com/p/DSi_MGkjn-Z/embed" width="100%" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+        <div class="rounded-2xl overflow-hidden bg-black aspect-[9/16] shadow-suave">
+          <iframe src="https://www.instagram.com/p/DSfKVXxDnfY/embed" width="100%" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+        <div class="rounded-2xl overflow-hidden bg-black aspect-[9/16] shadow-suave">
+          <iframe src="https://www.instagram.com/p/DSdCtOpDi74/embed" width="100%" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-serifBrand text-center mb-12 font-bold text-marronOscuro">Nos Encuentras Aqui</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8938726469987!2d-71.64586932346196!3d-40.76298163442869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf0009903df9%3A0x9249ece3d12e7b9e!2sYork%20Bakery!5e0!3m2!1ses!2sar!4v1735185800000" width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold text-marron mb-6">York Bakery</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="font-bold text-lg text-marron"><i class="fas fa-map-marker-alt text-oro mr-3"></i>Ubicacion</p>
+              <p class="text-gray-600 ml-8">Las Frambuesas 100, Villa La Angostura, Neuquen</p>
+            </div>
+            <div>
+              <p class="font-bold text-lg text-marron"><i class="fas fa-clock text-oro mr-3"></i>Horarios</p>
+              <p class="text-gray-600 ml-8">Lunes a Domingo: 8:00 AM - 21:00 PM</p>
+            </div>
+            <div>
+              <p class="font-bold text-lg text-marron"><i class="fas fa-phone text-oro mr-3"></i>Contacto</p>
+              <a href="https://wa.me/?text=Hola%20York%20Bakery" class="text-green-600 hover:text-green-700 ml-8 block">WhatsApp</a>
+            </div>
+          </div>
+          <a href="https://wa.me/?text=Hola%20York%20Bakery" class="mt-8 bg-green-500 text-white px-8 py-3 rounded-full font-bold hover:bg-green-600 inline-block">
+            <i class="fab fa-whatsapp mr-2"></i>Escribinos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-marronOscuro text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-2xl font-serifBrand mb-4">YORK BAKERY</h3>
+      <p class="text-gray-400 mb-6">Cafe de especialidad, panaderia y hojaldres en Villa La Angostura</p>
+      <div class="flex justify-center gap-6 mb-8">
+        <a href="https://instagram.com/york.bakery" class="text-white hover:text-oro"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="https://wa.me/?text=Hola%20York%20Bakery" class="text-white hover:text-oro"><i class="fab fa-whatsapp text-2xl"></i></a>
+      </div>
+      <p class="text-gray-500 text-sm">Las Frambuesas 100, Villa La Angostura, Neuquen</p>
+      <p class="text-gray-500 text-sm">Lunes a Domingo: 8:00 AM - 21:00 PM</p>
+      <p class="text-gray-500 text-sm mt-4">Pagina creada con <span class="text-oro">amor</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
